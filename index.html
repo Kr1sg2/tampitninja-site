@@ -6,58 +6,85 @@
   <meta name="description" content="Tampa IT Ninja - Your one-man tech solution for support, repair, and smart home setup." />
   <title>Tampa IT Ninja</title>
   <style>
+    :root {
+      --primary: #00ffcc;
+      --bg: #0a0a0a;
+      --card: #111;
+      --text: #f1f1f1;
+      --accent: #00b3a4;
+      --border: rgba(255,255,255,0.1);
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0a0a0a;
-      color: #f1f1f1;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
     header {
-      background-color: #111;
-      padding: 40px 20px;
+      background: linear-gradient(145deg, #000000, #111111);
+      padding: 60px 20px 30px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
     header h1 {
       margin: 0;
-      font-size: 2.8rem;
-      color: #00ffcc;
+      font-size: 3rem;
+      color: var(--primary);
     }
     header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
-      color: #aaa;
+      margin-top: 10px;
+      font-size: 1.25rem;
+      color: #ccc;
     }
     section {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
+      border-bottom: 1px solid var(--border);
     }
     h2 {
-      color: #00ffcc;
-      border-bottom: 2px solid #00ffcc;
-      padding-bottom: 10px;
+      color: var(--primary);
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
     }
     ul {
       list-style: none;
       padding: 0;
     }
+    ul li {
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+    }
     ul li::before {
-      content: "✅ ";
+      content: "✔";
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      top: 2px;
     }
-    .contact {
-      background-color: #111;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 30px;
+    .card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
-    .contact p {
-      line-height: 1.6;
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      color: #555;
+      color: #777;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
@@ -69,22 +96,30 @@
 
   <section>
     <h2>About Me</h2>
-    <p>Hi, I'm Kris George — your one-man IT army. With years of hands-on experience fixing, optimizing, and upgrading tech, I provide expert-level service for homes and small businesses in the Tampa area. Whether you're dealing with a slow computer or setting up a smart home, I've got your back.</p>
+    <div class="card">
+      <p>Hi, I'm Kris George — your one-man IT army. With years of hands-on experience fixing, optimizing, and upgrading tech, I provide expert-level service for homes and small businesses in the Tampa area. Whether you're dealing with a slow computer or setting up a smart home, I've got your back.</p>
+    </div>
+  </section>
 
+  <section>
     <h2>Services</h2>
-    <ul>
-      <li>PC & Laptop Repairs</li>
-      <li>Virus Removal & Tune-Ups</li>
-      <li>Smart Home Setup</li>
-      <li>Wi-Fi & Network Troubleshooting</li>
-      <li>Custom PC Builds</li>
-      <li>Remote Support & Backup Solutions</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li>PC & Laptop Repairs</li>
+        <li>Virus Removal & Tune-Ups</li>
+        <li>Smart Home Setup</li>
+        <li>Wi-Fi & Network Troubleshooting</li>
+        <li>Custom PC Builds</li>
+        <li>Remote Support & Backup Solutions</li>
+      </ul>
+    </div>
+  </section>
 
-    <div class="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:info@tampaitninja.ninja" style="color:#00ffcc;">info@tampaitninja.ninja</a></p>
-      <p><strong>Phone:</strong> (727) 619‑6555</p>
+  <section>
+    <h2>Contact</h2>
+    <div class="card contact">
+      <p><strong>Email:</strong> <a href="mailto:info@tampaitninja.ninja">info@tampaitninja.ninja</a></p>
+      <p><strong>Phone:</strong> (727) 619-6555</p>
       <p><strong>Location:</strong> Serving the Greater Tampa Bay Area</p>
     </div>
   </section>
